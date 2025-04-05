@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(221, 136, 136);
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(80, 33, 33);
+}
+.container-mosaico img {
+    transition: transform 0.3s ease-in-out; /* Transição suave */
+}
+
+.container-mosaico img:hover {
+    transform: scale(1.1); /* Aumenta a imagem em 10% ao passar o mouse */
+}
+/* Estilização do título */
+.container-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto 0;
+    width: 50%;
+    height: 60px;
+    font-size: 25px;
+    background-color: rgb(16, 16, 16);
+    color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Container do mosaico */
+.container-mosaico {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+    gap: 20px;
+    max-width: 800px;
+    height: auto;
+    border: 2px solid black;
+    padding: 10px;
+    transition: 0.5s ease-out;
+}
+
+.container-mosaico img {
+    width: 300px; 
+    max-width: 250px; 
+    height: 250px; 
+    object-fit: cover;
+}
+
+.container-mosaico img:hover {
+    transform: scale(1.1);
+}
+.texto-aniversario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Garante que o texto fique no centro da tela */
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px;
+    height: auto;
+}
+footer {
+    text-align: center;
+    font-size: 14px; /* Reduz o tamanho da fonte */
+    padding: 10px; /* Reduz o espaçamento interno */
+    color: #ffffff; /* Cor do texto */
+    background-color: #000000; /* Cor de fundo */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(221, 136, 136); /* cor de fundo */
+    z-index: -1; /* fica atrás de tudo */
+}
