@@ -1,99 +1,59 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Uma Perguntinha Especial 💍</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #fff0f5;
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    h1 {
-      font-size: 32px;
-      color: #ff4d6d;
-    }
-
-    .botoes {
-      margin-top: 40px;
-      position: relative;
-      height: 150px;
-    }
-
-    .botao {
-      background-color: #ff4d6d;
-      color: white;
-      border: none;
-      padding: 15px 30px;
-      font-size: 20px;
-      border-radius: 12px;
-      cursor: pointer;
-      position: absolute;
-      transition: 0.3s ease-in-out;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    #sim {
-      left: 40%;
-    }
-
-    #nao {
-      left: 55%;
-    }
-
-    .mensagem {
-      font-size: 22px;
-      color: #333;
-      margin-top: 40px;
-    }
-
-    .foto-final {
-  margin: 30px auto 0;
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  display: none;
-  border-radius: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.4);
-  display: none;
-}
-
-
-    .botao:hover {
-      transform: scale(1.1);
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Momento Eterno &#x1F48C</title>
+  <link rel="shortcut icon" href="imagens/Primeira foto!.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="surpresa.css">
 </head>
 <body>
-
-  <h1>Você quer casar comigo? 💖💍</h1>
-
-  <div class="botoes">
-    <button id="sim" class="botao" onclick="respostaSim()">Sim 😍</button>
-    <button id="nao" class="botao" onmouseover="fugir()">Não 🙈</button>
+  <audio autoplay loop>
+    <source src="I Wana Be Yours.mp3"  type="audio/mp3">
+</audio>
+<h1>Olá, meu amor só quero dizer que sou muito feliz do seu lado vida onde tudo começou numa rua que marcou agente, foram muitas coisa que já passamos juntos e eu agradeço muito mesmo pois, sem voçê não me vejo maais não e a cada minuto só penso em como poder dar a melhor condição para podemos viver juntinhos &#x1F496, no "meio" da rua nosso primeiro beijo&#x1F618 todo envergonhado mais ali foi o desbloqueio para tudo até aonde já chegamos e aonde vamos chegar ainda, eu só tenho a agradecer a cada momento que tivemos minha princesa&#x1F478. <h1>
+ <h2></h2>
+  <div class="carrossel-container">
+    <button class="carrossel-btn prev">&#10094;</button>
+    <div class="carrossel">
+      <img src="imagens/Deusa.jpg" class="carrossel-img" alt="Foto 1">
+      <img src="imagens/diva.jpg" class="carrossel-img" alt="Foto 2">
+      <img src="imagens/Divissima.jpg" class="carrossel-img" alt="Foto 3">
+      <img src="imagens/espelho feliz.jpg" class="carrossel-img" alt="Foto 4">
+      <img src="imagens/menina feliz.jpg" class="carrossel-img" alt="Foto 5">
+    </div>
+    <button class="carrossel-btn next">&#10095;</button>
   </div>
 
-  <p class="mensagem" id="mensagem"></p>
-  <img id="foto" class="foto-final" src="imagens/nois espelho.jpg" alt="Foto de amor">
-
   <script>
-    function respostaSim() {
-      document.getElementById("mensagem").textContent = "Sabia que você ia dizer sim! 💞 Te amo muito!";
-      document.getElementById("foto").style.display = "block";
+    const carrossel = document.querySelector('.carrossel');
+    const imagens = document.querySelectorAll('.carrossel-img');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let index = 0;
+  
+    function updateCarrossel() {
+      const width = imagens[0].clientWidth;
+      carrossel.style.transform = `translateX(-${index * width}px)`;
     }
-
-    function fugir() {
-      const botaoNao = document.getElementById("nao");
-      const maxX = window.innerWidth - 100;
-      const maxY = window.innerHeight - 100;
-      const randomX = Math.floor(Math.random() * maxX);
-      const randomY = Math.floor(Math.random() * maxY);
-      botaoNao.style.left = `${randomX}px`;
-      botaoNao.style.top = `${randomY}px`;
-    }
-  </script>
-
+  
+    nextBtn.addEventListener('click', () => {
+      index = (index + 1) % imagens.length;
+      updateCarrossel();
+    });
+  
+    prevBtn.addEventListener('click', () => {
+      index = (index - 1 + imagens.length) % imagens.length;
+      updateCarrossel();
+    });
+  
+    window.addEventListener('resize', updateCarrossel);
+  </script></h2>
+  <blockquote class="frase-amor">
+    <p>"O amor é algo eterno; o aspecto pode mudar, mas não a essência."</p>
+    <footer>— Vincent van Gogh</footer>
+  </blockquote>
+  
+  
 </body>
 </html>
