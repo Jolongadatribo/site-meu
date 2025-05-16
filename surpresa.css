@@ -34,7 +34,7 @@
             font-size: 2rem;
             background-color: rgba(0, 0, 0, 0.5);
             border: none;
-            color: white;
+            color: rgb(255, 255, 255);
             padding: 10px;
             cursor: pointer;
             z-index: 1;
@@ -57,7 +57,7 @@
             padding-left: 15px;
             margin: 30px auto;
             max-width: 600px;
-            background-color: #fdf3ff;
+            background-color: #f8f8f8;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
           }
